@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<title>my first angular.js</title>
+</head>
+
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+<input ng-model="name">
+<h1>我的名字是 {{name}}</h1>
+</div>
+<script>
+var app=angular.module('myApp',[]);
+app.controller('myCtrl',function($scope){
+	$scope.name="lx yujia";
+});
+
+</script>
+<p>当你修改输入值时，会影响到模型（model，当然也会影响到控制器对应的属性值</p>
+
+</body>
+</html>
